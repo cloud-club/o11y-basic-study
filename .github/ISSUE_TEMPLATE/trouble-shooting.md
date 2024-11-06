@@ -1,7 +1,7 @@
 ---
 name: Trouble Shooting
-about: 실습 과정 중 발생한 문제와 해결 방법 기술
-title: "[TroubleShooting]"
+about: 실습 과정 중 발생한 문제와 해결 방법 공유
+title: "[Trouble Shooting]"
 labels: trouble shooting
 assignees: ''
 
@@ -13,4 +13,4 @@ assignees: ''
 
 **Resources / 관련 자료**
 
-**Additional context / 추가 정보**
+**Additional context / 추가 내용**
