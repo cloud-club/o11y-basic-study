@@ -1,5 +1,5 @@
 ---
-name: "\bAdditional Study"
+name: Additional Study
 about: 추가로 학습한 내용 공유
 title: "[Additional Study]"
 labels: additional study
