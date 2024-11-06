@@ -1,6 +1,6 @@
 ---
 name: TROUBLE_SHOOTING
-about: trouble shooting
+about: 실습 과정 중 발생한 문제와 해결 방법 기술
 title: "[TroubleShooting]"
 labels: trouble shooting
 assignees: ''
