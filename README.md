@@ -6,6 +6,8 @@
 - 스터디 시간: 매주 월요일 오후 10시
 - 스터디 목적: Observability 기초 학습
 - 스터디 자료: [모니터링의 새로운 미래, 관측 가능성](https://product.kyobobook.co.kr/detail/S000211468119)
+    - [저자의 미디엄 블로그](https://yohaim.medium.com/)
+    - [저자의 github](https://github.com/philllipjung/o11ybook)
 
 
 ## 👥 Members
