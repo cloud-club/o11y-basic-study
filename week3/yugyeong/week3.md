@@ -5,6 +5,8 @@
 ## 1️⃣ 프로메테우스의 기능
 프로메테우스 기능은 운영자를 위한 메트릭 모니터링, 개발자를 위한 exporter, 오토스케일링 설정, 시계열 DB, 서비스 모니터를 사용한 서비스 디스커버리, 알람과 업무 규칙 등이 있다. 프로메테우스와 쿠버네티스는 긴밀하게 연결된다. 쿠버네티스는 런타임 플랫폼이고, 나머지 운영과 자동화는 프로메테우스를 통해 구현한다. 아래 그림은 프로메테우스의 기능과 쿠버네티스와의 관계를 나타낸 것이다.
 
+
+<img width="805" alt="image" src="https://github.com/user-attachments/assets/85bbb7ac-59f2-43bb-b0b8-7007ed5bda8d"><br/>
 프로메테우스 기능
 
 <br/>
@@ -31,17 +33,19 @@
 2. 메트릭 측정과 리소스를 오토스케일링 처리한다.
 3. 변경된 리소스를 자동으로 찾는다.
 4. HPA와 연계해 증가한 리소스로 유저 트래픽을 분배한다.
- 
-오른쪽 그림은 노드 익스포터를 통해 프로메테우스로 전달되는 메트릭의 이동을 보여준다
- 
+
+아래 그림은 노드 익스포터를 통해 프로메테우스로 전달되는 메트릭의 이동을 보여준다.
+
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/ea191637-bd1f-4b81-9ab3-09938d704a95"><br/>
 
  
+
 ## 2️⃣ 예제 - 익스포터
 노드 익스포터가 OS 시스템 메트릭을 수집하고 프로메테우스 DB에 저장하는 과정을 살펴보자.
 > 💡 여기서 잠깐!Node Exporter는 프로메테우스 익스포터 중 하나로, 하드웨어의 상태와 커널 관련 메트릭을 수집하는 메트릭 수집기이다. 노드 익스포터로부터 메트릭을 수집하면 프로메테우스 내의 TSDB에 저장되고, PromQL로 메트릭을 쿼리해 서버 상태를 모니터링할 수 있다.
  
  
-##### 1. 프로메테우스 설치
+#### 1. 프로메테우스 설치
 
 Installation | Prometheus
 An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
@@ -58,7 +62,7 @@ $ wget https://github.com/prometheus/prometheus/releases/download/v2.37.0/promet
 $ tar xzvf prometheus-2.37.0.linux-amd64.tar.gz
 ```
  
-##### 2. yaml 파일 설정
+#### 2. yaml 파일 설정
 노드 익스포터의 metrics HTTP endpoint에 접근하는 yaml을 구성한다.
 ```
 # yaml 파일 설정
@@ -93,7 +97,7 @@ scrape_configs:
 - targets: 메트릭을 수집할 엔드포인트 지정
  
  
-##### 3. Service의 User를 프로메테우스로 지정하고 리눅스 시스템에 등록하는 파일 작성
+#### 3. Service의 User를 프로메테우스로 지정하고 리눅스 시스템에 등록하는 파일 작성
 
 ```
 #prometheus.service
@@ -122,7 +126,7 @@ ExecStart= /usr/local/bin/prometheus\
 WantedBy=multi-user.target
 ```
  
-##### 4. 프로메테우스 시작
+#### 4. 프로메테우스 시작
 프로메테우스를 시작하는 명령어를 통해 위의 파일을 시작한다.
 
 ```
@@ -130,13 +134,13 @@ $ systemctl start prometheus
 $ systemctl status prometheus
 ```
  
-##### 5. 노드 익스포터 다운
+#### 5. 노드 익스포터 다운
 
 ```
 $ tar xvfz node_exporter-1.3.1.linux.amd64.tar.gz
 ```
  
-##### 6. node_exporter.service 파일 작성
+#### 6. node_exporter.service 파일 작성
 시스템 등록을 위해 root로 사용자 파일 작성
 
 ```
@@ -160,7 +164,7 @@ ExecStart=/root/node_exporter-1.3.1.linux-amd64/node_exporter
 WantedBy=multi-user.target
 ```
  
-##### 7. 노드 익스포터 실행 및 상태 확인
+#### 7. 노드 익스포터 실행 및 상태 확인
 
 ```
 $ systemctl start node-exporter
