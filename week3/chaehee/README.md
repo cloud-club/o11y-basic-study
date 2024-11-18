@@ -158,3 +158,19 @@ Forwarding from [::1]:9093 -> 9093
 3. Graph에서 `http_requests_total` 확인
 ![alt text](./image/image-4.png)
 
+## 프로메테우스 오토스케일링
+### 프로메테우스 어댑터
+```
+# minikube 환경 구축
+$ minikube start --vm-driver=docker --kubernetes-version v1.20.0 --memory=12000 --cpus=4
+
+# 네임스페이스 생성
+$ k create ns monitoring
+
+# 오퍼레이터 설치
+
+# 설치된 파드 확인 
+
+# 포트포워딩 구성
+
+```
