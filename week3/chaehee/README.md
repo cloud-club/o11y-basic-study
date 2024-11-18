@@ -66,7 +66,7 @@ wget https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_e
 
 - http_requests_total 메트릭
     - status 종류: 200,400,500 &rarr; 3개
-    - method 종류: GET, Prometheus &rarrl; 2개
+    - method 종류: GET, Prometheus &rarr; 2개
 
     3 X 2 = 6개 시계열 데이터
 #### 메트릭에서의 카디널리티
@@ -136,7 +136,7 @@ Forwarding from [::1]:9093 -> 9093
 ### 서비스 모니터
 - 서비스를 모니터링하는 방법을 선언적으로 정의 가능 
 - k8s 내 애플리케이션을 모니터링하려면 엔드포인트(기본적인 IP 주소 목록)가 있어야 함 
-- k8s svc는 레이블 셀렉터로 파드를 발견하고 이를 엔드포인트에 추가 &larr; 프로메테우스 오퍼레이터 서비스 모티너는 차례로 해당 엔드포인트를 검색하고 파드를 모니터링![alt text](./image/image-2.png)
+- k8s svc는 레이블 셀렉터로 파드를 발견하고 이를 엔드포인트에 추가 &larr; 프로메테우스 오퍼레이터 서비스 모티너는 차례로 해당 엔드포인트를 검색하고 파드를 모니터링 ![alt text](./image/image-2.png)
 - 프로메테우스에서 확인해야하는 화면은 서비스 디스커버리, 타깃, 메트릭 
 
 ### sample-app
