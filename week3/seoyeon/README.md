@@ -28,9 +28,9 @@
 
 프로메테우스 익스포터가 데이터를 제공 → 프로메테우스 서버가 데이터 수집해 시계열 데이터베이스에 저장
 
-![alt text](image/image 1.png)
+![alt text](image/image1.png)
 
-![alt text](image/image 2.png)
+![alt text](image/image2.png)
 
 - 카디널리티(cardinality)와 스크래핑
     
@@ -62,7 +62,7 @@
 - 서비스와 파드 모니터링
 - 프로메테우스 오퍼레이터를 사용해 프로메테우스 서버를 자동으로 변경하고 타깃으로부터 메트릭 수집 자동화
     
-    ![alt text](image/image 3.png)
+    ![alt text](image/image3.png)
 
 ## 오토스케일링
 
@@ -90,7 +90,7 @@
 1. 규칙 매니저가 평가 주기에 따라 규칙(레코딩 규칙과 알람 규칙)을 정기적으로 평가하고 알람 라이프 사이클 관리
 2. 알람 매니저는 생성된 알람을 전달받고 통지로 변환
     
-    ![alt text](image/image 4.png)
+    ![alt text](image/image4.png)
 
 **알림 상태**
 
@@ -100,7 +100,7 @@
 - 펜딩: 조건을 만족하는 알람 규칙이 감지되어 알람 준비(active) 상태. 하지만 아직 파이어링되기 전으로 장시간 활성 상태는 아님
 - 파이어링: 정의된 임곗값 이상으로 장시간 활성 상태
 
-![alt text](image/image 5.png)
+![alt text](image/image5.png)
 
 ## 운영 아키텍처
 
@@ -109,7 +109,7 @@
 1. 수직 샤딩: 프로메테우스 서버 기준으로 메트릭 수집
 2. 수평 샤딩: 샤드 기준으로 메트릭 수집
 
-![alt text](image/image 6.png)
+![alt text](image/image6.png)
 
 **샤딩 아키텍처**
 
@@ -119,12 +119,12 @@
 - 프로메테우스 서비스 A: 다양한 머신에 분산된 서비스 A에 대한 메트릭만을 스크래핑
 - 프로메테우스 서비스 B: 다양한 머신에 분산된 서비스 B에 대한 메트릭만을 스크래핑
 
-![alt text](image/image 7.png)
+![alt text](image/image7.png)
 
 1. 수평 샤딩
 - 서비스 A를 스크래핑하기 위해 2개의 샤드(샤드1, 샤드2) 구성
 
-![alt text](image/image 8.png)
+![alt text](image/image8.png)
 
 **페더레이션 아키텍처**
 
@@ -132,7 +132,7 @@
 
 인프라와 애플리케이션을 좀 더 폭넓게 볼 수 있지만, 소스 프로메테우스에서 타깃 프로메테우스로 대량의 데이터와 메트릭을 가져오는 것은 좋은 방법이 아님
 
-![alt text](image/image 9.png)
+![alt text](image/image9.png)
 
 ## 타노스 운영
 
@@ -152,7 +152,7 @@
 
 쿼리어: 수신한 쿼리를 사이드카나 다른 타노스 구성 요소로 분배하는 프로메테우스 호환 가능한 API
 
-![alt text](image/image 10.png)
+![alt text](image/image10.png)
 
 **타노스 사이드카 방식**
 
