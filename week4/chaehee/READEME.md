@@ -2,24 +2,19 @@
 ### 프로메테우스 어댑터
 ```
 # minikube 환경 구축(for mac)
-$ minikube start --driver=docker --kubernetes-version=v1.29.11 --memory=12000 --cpus=4 
+$ minikube start --cpus=4 --memory=8192 --driver=docker
 
-# 네임스페이스 생성
-$ kubectl create namespace prometheus
 
 # 오퍼레이터 설치
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-
-$ helm upgrade -i prometheus prometheus-community/prometheus \
-    --namespace prometheus \
-    --set alertmanager.persistence.storageClass="gp2" \
-    --set server.persistentVolume.storageClass="gp2"
+$ helm install prometheus prometheus-community/kube-prometheus-stack  
 
 # 설치된 파드 확인 
-$ kubectl get pods -n prometheus
+$ kubectl get pods 
+$ kubectl get servicemonitor
 
 # 포트포워딩 구성
-
+$ kubectl port-forward svc/prometheus-kube-prometheus-prometheus 9090
 ```
 - 프로메테우스 어댑터는 'discovery'규칙을 통해 노출할 메트릭과 이를 노출하는 방법 결정
 - 각 규칙은 다음의 네 부분으로 나눔
@@ -65,4 +60,17 @@ $ kubectl get pods -n prometheus
         - 규칙
         - 장기 보관
 ### 타노스 사이드카 방식
-- 
+- 사이드카는 **원격 읽기** 방식 사용(pull 방식) 
+- 타노스 쿼리: 타노스 쿼리어와 사이드카는 글로벌 뷰 문제를 해결
+- 타노스 사이드카: 인스턴스의 TSDB 블록을 객체 스토리지에 제공하는 데몬
+- 타노스 스토어 게이트 웨이: 스토어 API 엔드포인트를 통해 객체 스토리지로 전달되는 블록의 과거 시계열에 대한 액세스 제공 
+- 타노스 콤팩터: 타노스 업로드 기능이 안정적으로 작동하기 위한 압축 작업 처리 
+- 타노스 버킷: 객체 스토리지의 블록 검증, 복구, 나열, 검사를 담당
+### 타노스 리시버 방식
+- **원격 쓰기**를 수용하고 데이터 노출 및 블록을 객체 스토리지로 전달하는 데몬 
+
+```
+# 타노스 다운로드
+wget https://github.com/thanos-io/thanos/releases/download/v0.25.0/thanos-0.25.0.linux-amd64.tar.gz
+
+```
