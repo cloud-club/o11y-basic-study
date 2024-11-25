@@ -108,9 +108,9 @@ AlertManager도 yaml 설정파일을 작성함으로써 구축할 수 있다. �
 
 # 6. 참고 문서
 
-https://product.kyobobook.co.kr/detail/S000211468119
-https://prometheus.io/docs/introduction/overview/
-https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221829384846
-https://devocean.sk.com/blog/techBoardDetail.do?ID=164800
-https://blog.omoknooni.me/115
-https://bcho.tistory.com/1375
+- https://product.kyobobook.co.kr/detail/S000211468119
+- https://prometheus.io/docs/introduction/overview/
+- https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221829384846
+- https://devocean.sk.com/blog/techBoardDetail.do?ID=164800
+- https://blog.omoknooni.me/115
+- https://bcho.tistory.com/1375
