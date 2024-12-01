@@ -4,8 +4,8 @@
 - 그라파나: Observability 구현 툴
     - 대중적이고 라이센스에 자유로움
     - 클러스터 구성이 가능하며 많은 API 제공
-    
-![alt text](./image/image3.png)
+
+![alt text](./image/image.png)
 
 ### 구성 (환경: ubuntu 22.04)
 - 환경 구성
@@ -86,7 +86,7 @@
 - 필요한 정보를 얻기 위해 스토어 게이트웨이는 블록에 대한 인덱스 헤더를 만들고 로컬 디스크에 저장
 
 ### 미미르 구성
-![alt text](./image/image2.png)
+![alt text](./image/image3.png)
 - 프로메테우스 단점
     - 클러스터 구성 지원X
     - 메트릭 데이터 장기간 보관 X
