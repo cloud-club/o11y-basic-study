@@ -27,7 +27,7 @@
 | week3     | 11/18     | 3장 관측 가능성의 시작, 프로메테우스   | Prometheus, Thanos         |
 | week4     | 11/25     | 3장 관측 가능성의 시작, 프로메테우스   | Prometheus, Thanos         |
 | week5     | 12/2      | 4장 오픈소스 관측 가능성, 그라파나    | Grafana LGTM 스택, Jaeger    |
-| week6     | 12/9      | 4장 오픈소스 관측 가능성, 그라파나    | Grafana LGTM 스택, Jager     |
+| week6     | 12/9      | 4장 오픈소스 관측 가능성, 그라파나    | Grafana LGTM 스택, Jaeger     |
 | week7     | 12/16     | 6장 관측 가능성의 표준, 오픈텔레메트리 | OpenTelemetry               |
 | week8     | 12/23     | 6장 관측 가능성의 표준, 오픈텔레메트리 | OpenTelemetry               |
 
