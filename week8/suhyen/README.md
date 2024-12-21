@@ -141,7 +141,8 @@ service:
 
 ### o11y shop 데모 아키텍처
 
-![스크린샷 2024-12-21 오후 3 13 01](https://github.com/user-attachments/assets/55b1e04d-1c03-4bb4-88c4-ff1439c17bd7)
+<img src="https://github.com/user-attachments/assets/55b1e04d-1c03-4bb4-88c4-ff1439c17bd7" alt="스크린샷 2024-12-21 오후 3 13 01" width="450">
+
 
 ### 전체 파이프라인 아키텍처
 
