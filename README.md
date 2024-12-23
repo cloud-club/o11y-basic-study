@@ -6,6 +6,8 @@
 - 스터디 시간: 매주 월요일 오후 10시
 - 스터디 목적: Observability 기초 학습
 - 스터디 자료: [모니터링의 새로운 미래, 관측 가능성](https://product.kyobobook.co.kr/detail/S000211468119)
+    - [저자의 미디엄 블로그](https://yohaim.medium.com/)
+    - [저자의 github](https://github.com/philllipjung/o11ybook)
 
 
 ## 👥 Members
@@ -25,7 +27,7 @@
 | week3     | 11/18     | 3장 관측 가능성의 시작, 프로메테우스   | Prometheus, Thanos         |
 | week4     | 11/25     | 3장 관측 가능성의 시작, 프로메테우스   | Prometheus, Thanos         |
 | week5     | 12/2      | 4장 오픈소스 관측 가능성, 그라파나    | Grafana LGTM 스택, Jaeger    |
-| week6     | 12/9      | 4장 오픈소스 관측 가능성, 그라파나    | Grafana LGTM 스택, Jager     |
+| week6     | 12/9      | 4장 오픈소스 관측 가능성, 그라파나    | Grafana LGTM 스택, Jaeger     |
 | week7     | 12/16     | 6장 관측 가능성의 표준, 오픈텔레메트리 | OpenTelemetry               |
 | week8     | 12/23     | 6장 관측 가능성의 표준, 오픈텔레메트리 | OpenTelemetry               |
 
