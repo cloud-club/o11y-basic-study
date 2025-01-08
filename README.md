@@ -8,6 +8,7 @@
 - 스터디 자료: [모니터링의 새로운 미래, 관측 가능성](https://product.kyobobook.co.kr/detail/S000211468119)
     - [저자의 미디엄 블로그](https://yohaim.medium.com/)
     - [저자의 github](https://github.com/philllipjung/o11ybook)
+- 스터디 회고: [Youtube](https://www.youtube.com/watch?v=fc4dOB9YPkM&t=9s) | [Medium](https://medium.com/@cloudclub)
 
 
 ## 👥 Members
