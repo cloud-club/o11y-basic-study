@@ -18,7 +18,7 @@
 
 | ![seul394](https://github.com/seul394.png) | ![suhyenim](https://github.com/suhyenim.png) | ![yureutaejin](https://github.com/yureutaejin.png) | ![yugyeongh](https://github.com/yugyeongh.png) |
 |:--:|:--:|:--:|:--:|
-| [이슬](https://github.com/seul394) | [임수현](https://github.com/suhyenim) | [진윤태](https://github.com/yureutaejin) | [현유경](https://github.com/yugyeongh) |
+| [이슬](https://github.com/seul394) | [임수현(스터디장)](https://github.com/suhyenim) | [진윤태](https://github.com/yureutaejin) | [현유경](https://github.com/yugyeongh) |
 
 
 ## 📚 Curriculum
